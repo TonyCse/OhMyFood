@@ -1,0 +1,21 @@
+{
+  "name": "p3_cseresznyak_tony",
+  "version": "1.0.0",
+  "description": "��#\u0000 \u0000C\u0000s\u0000e\u0000r\u0000e\u0000s\u0000z\u0000n\u0000y\u0000a\u0000k\u0000T\u0000o\u0000n\u0000y\u0000_\u00003\u0000_\u00002\u00005\u00000\u00001\u00002\u00000\u00002\u00002\u0000\r\u0000 \u0000",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "sass": "sass ./sass/main.scss:./public/css/style.css",
+    "watch": "sass --watch ./sass/main.scss:./public/css/style.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/SANBLEU/CseresznyakTony_3_25012022.git"
+  },
+  "author": "Tony",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/SANBLEU/CseresznyakTony_3_25012022/issues"
+  },
+  "homepage": "https://github.com/SANBLEU/CseresznyakTony_3_25012022#readme"
+}
