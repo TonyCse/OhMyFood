@@ -1,6 +1,14 @@
-ul {
-    list-style-type: none; 
-    li {
+footer {
+    background-color: rgb(53, 53, 53);
+    h4 {
+        color: white;
+        padding: 10px;
+    }
+    a {
         display: flex;
+        color: white;
+    }
+    ul {
+        list-style: none;
     }
 }
