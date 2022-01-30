@@ -1,0 +1,15 @@
+button {
+    padding: 3px;
+}
+
+
+.title button {
+    font-size: 20px;
+    padding: 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    color: white;
+    background-image: linear-gradient(to top, #9356DC, #FF79DA);
+    border: none;
+    box-shadow: 5px 4px 8px 1px #919191;
+}

@@ -1,4 +1,10 @@
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;500;700&family=Shrikhand&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 section img {
   max-width: 100%;
   max-height: 300px;
@@ -28,10 +34,18 @@ button {
   padding: 3px;
 }
 
-.card {
-  box-shadow: 0px 0px 10px 0 rgba(0, 0, 0, 0.2);
+.title button {
+  font-size: 20px;
+  padding: 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  color: white;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  border: none;
+  box-shadow: 5px 4px 8px 1px #919191;
 }
-.card .card__img {
+
+.card__img {
   height: 200px;
 }
 
@@ -41,8 +55,14 @@ button {
   object-fit: cover;
 }
 
-.header__logo {
+header {
+  box-shadow: 0px 0px 10px 0px #919191;
+  position: relative;
+}
+header .header__logo {
   text-align: center;
+  padding: 15px 0;
+  margin: 0px;
 }
 
 footer {
@@ -58,6 +78,28 @@ footer a {
 }
 footer ul {
   list-style: none;
+}
+
+.searchbar {
+  text-align: center;
+  padding: 20px;
+  color: #353535;
+  background-color: #e2e2e2;
+}
+
+.title {
+  padding: 40px 20px;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+.title h2 {
+  font-size: 29px;
+  padding: 0px 20px 20px 20px;
+}
+.title h3 {
+  font-weight: 300;
+  font-size: 19px;
+  padding-bottom: 30px;
 }
 
 /*# sourceMappingURL=style.css.map */
