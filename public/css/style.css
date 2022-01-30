@@ -125,7 +125,7 @@ footer ul {
 }
 
 .title {
-  padding: 40px 20px;
+  padding: 40px 20px 50px 20px;
   text-align: center;
   background-color: #f1f1f1;
 }
@@ -141,6 +141,47 @@ footer ul {
 
 .list {
   padding: 35px;
+}
+
+.restaurants {
+  background-color: #f1f1f1;
+  padding: 50px 20px;
+}
+.restaurants h1 {
+  padding-bottom: 20px;
+}
+.restaurants .card {
+  margin: 0px 0px 30px 0px;
+  box-shadow: 0px 0px 10px 0px #919191;
+  border-radius: 15px;
+  background-color: white;
+}
+.restaurants .card__img {
+  height: 170px;
+}
+.restaurants .card img {
+  border-radius: 15px 15px 0px 0px;
+  height: 170px;
+}
+.restaurants .card__description {
+  padding: 20px;
+  position: relative;
+}
+.restaurants h3 {
+  padding-bottom: 5px;
+  font-size: 20px;
+  font-weight: 700;
+}
+.restaurants p {
+  font-size: 17px;
+  font-weight: 300;
+}
+.restaurants i {
+  position: absolute;
+  right: 7%;
+  top: 34%;
+  font-size: 30px;
+  font-weight: 300;
 }
 
 /*# sourceMappingURL=style.css.map */
