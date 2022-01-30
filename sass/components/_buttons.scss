@@ -13,3 +13,40 @@ button {
     border: none;
     box-shadow: 5px 4px 8px 1px #919191;
 }
+
+.list__button {
+    padding: 20px 0px;
+    margin: 20px 0px;
+    display: flex;
+    align-items: center;
+    border-radius: 13px;
+    box-shadow: 0.25rem 0.25rem 10px #e4e4e4;
+    background-color: #f1f1f1;
+    cursor: pointer;
+    span {
+        position: absolute;
+        left: 27px;
+        padding: 3px;
+        text-align: center;
+        color: white;
+        font-size: 15px;
+        background-color: #9356DC;
+        height: 25px;
+        width: 25px;
+        border-radius: 100px;
+    }
+    i {
+        color: #727272;
+        padding: 0% 0% 0% 13%;
+    }
+    div {
+        padding: 0% 0% 0% 10%;
+    }
+}
+
+.list__button:hover {
+    background-color: #f5edff;
+        i {
+            color: #8626fc;;
+    }
+}
