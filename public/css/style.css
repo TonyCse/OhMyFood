@@ -104,6 +104,7 @@ header .header__logo {
 
 footer {
   background-color: #353535;
+  padding: 20px;
 }
 footer h4 {
   color: white;
@@ -112,6 +113,10 @@ footer h4 {
 footer a {
   display: flex;
   color: white;
+  padding: 0px 0px 10px 0px;
+}
+footer i {
+  width: 30px;
 }
 footer ul {
   list-style: none;
