@@ -77,6 +77,17 @@ button {
   color: #8626fc;
 }
 
+.menu button {
+  font-size: 20px;
+  padding: 20px 60px 20px 60px;
+  border-radius: 40px;
+  cursor: pointer;
+  color: white;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  border: none;
+  box-shadow: 5px 4px 8px 1px #919191;
+}
+
 .card__img {
   height: 200px;
 }
@@ -224,25 +235,30 @@ footer ul {
 }
 .menu .menu__title {
   padding: 0px 0px 5% 2%;
-  font-size: 33px;
+  font-size: 28px;
   display: flex;
   justify-content: space-between;
 }
 .menu .menu__title i {
   position: absolute;
-  top: 3.5%;
+  top: 2.5%;
   right: 5%;
 }
 .menu .menu__subtitle {
   font-size: 22px;
   font-weight: 300;
-  padding-bottom: 5px;
+  padding: 30px 0px 5px 0px;
 }
 .menu .menu__line {
   background-color: #99E2D0;
   width: 55px;
   height: 4px;
   margin-bottom: 20px;
+}
+.menu .menu__button {
+  display: flex;
+  justify-content: center;
+  margin: 80px 0px 50px 0px;
 }
 
 /*# sourceMappingURL=style.css.map */
