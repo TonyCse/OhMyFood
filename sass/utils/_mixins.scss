@@ -1,0 +1,9 @@
+@mixin pink__gradient__button($color1, $color2) {
+    font-size: 20px;
+    border-radius: 40px;
+    cursor: pointer;
+    color: white;
+    background-image: linear-gradient(to top, $color1, $color2);
+    border: none;
+    box-shadow: 5px 4px 8px 1px #919191;
+}
