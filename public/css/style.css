@@ -29,9 +29,20 @@ button {
   padding: 3px;
 }
 
-.title button {
+.menu button {
+  padding: 20px 60px 20px 60px;
   font-size: 20px;
+  border-radius: 40px;
+  cursor: pointer;
+  color: white;
+  background-image: linear-gradient(to top, #9356DC, #FF79DA);
+  border: none;
+  box-shadow: 5px 4px 8px 1px #919191;
+}
+
+.title button {
   padding: 20px;
+  font-size: 20px;
   border-radius: 40px;
   cursor: pointer;
   color: white;
@@ -66,7 +77,7 @@ button {
   color: #727272;
   padding: 0% 0% 0% 13%;
 }
-.list__button div {
+.list__button p {
   padding: 0% 0% 0% 10%;
 }
 
@@ -75,17 +86,6 @@ button {
 }
 .list__button:hover i {
   color: #8626fc;
-}
-
-.menu button {
-  font-size: 20px;
-  padding: 20px 60px 20px 60px;
-  border-radius: 40px;
-  cursor: pointer;
-  color: white;
-  background-image: linear-gradient(to top, #9356DC, #FF79DA);
-  border: none;
-  box-shadow: 5px 4px 8px 1px #919191;
 }
 
 .card__img {
@@ -145,7 +145,9 @@ footer {
 }
 footer h4 {
   color: white;
-  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 22px;
+  font-weight: normal;
 }
 footer a {
   display: flex;
@@ -201,7 +203,7 @@ footer ul {
 .restaurants .card__img {
   height: 170px;
 }
-.restaurants .card img {
+.restaurants .card__img img {
   border-radius: 15px 15px 0px 0px;
   height: 170px;
 }
@@ -232,24 +234,22 @@ footer ul {
   position: relative;
   top: -50px;
   padding: 34px 5% 5% 5%;
+  margin-bottom: -50px;
 }
-.menu .menu__title {
-  padding: 0px 0px 5% 2%;
+.menu__title {
   font-size: 28px;
   display: flex;
   justify-content: space-between;
-}
-.menu .menu__title i {
-  position: absolute;
-  top: 2.5%;
-  right: 5%;
+  align-items: center;
 }
 .menu .menu__subtitle {
   font-size: 22px;
   font-weight: 300;
   padding: 30px 0px 5px 0px;
 }
-.menu .menu__line {
+.menu .menu__subtitle:after {
+  content: "";
+  display: block;
   background-color: #99E2D0;
   width: 55px;
   height: 4px;
