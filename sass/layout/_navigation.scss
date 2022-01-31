@@ -64,3 +64,32 @@
             font-weight: 300;
         }
 }
+.menu {
+    background-color: #f1f1f1;
+    border-radius: 45px 45px 0px 0px;
+    position: relative;
+    top: -50px;
+    padding: 34px 5% 5% 5%;
+    .menu__title {
+        padding: 0px 0px 5% 2%;
+        font-size: 33px;
+        display: flex;
+        justify-content: space-between;
+        i {
+            position: absolute;
+            top: 3.5%;
+            right: 5%;
+        }
+    }
+    .menu__subtitle {
+        font-size: 22px;
+        font-weight: 300;
+        padding-bottom: 5px;
+    }
+    .menu__line {
+        background-color: #99E2D0;
+        width: 55px;
+        height: 4px;
+        margin-bottom: 20px;
+    }
+}

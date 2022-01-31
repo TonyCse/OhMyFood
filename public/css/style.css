@@ -21,12 +21,7 @@ body, html {
   font-family: "Roboto", sans-serif;
 }
 
-header h1, .menu h1 {
-  font-family: Shrikhand, Roboto, sans-serif;
-  font-size: 29px;
-}
-
-footer h4 {
+header h1, .menu__title, footer h4 {
   font-family: Shrikhand, Roboto, sans-serif;
 }
 
@@ -92,6 +87,25 @@ button {
   object-fit: cover;
 }
 
+.menu__card {
+  background-color: white;
+  border-radius: 17px;
+  margin-bottom: 15px;
+  padding: 17px;
+  display: flex;
+  align-items: center;
+  box-shadow: 2px 3px 11px -3px #919191;
+}
+.menu__card .menu__card__text {
+  flex: 1;
+}
+.menu__card .menu__card__text h3 {
+  padding-bottom: 7px;
+}
+.menu__card .menu__card__text p {
+  font-weight: 400;
+}
+
 header {
   box-shadow: 0px 0px 10px 0px #919191;
   position: relative;
@@ -100,6 +114,18 @@ header .header__logo {
   text-align: center;
   padding: 15px 0;
   margin: 0px;
+}
+
+.header--resto {
+  box-shadow: none;
+}
+.header--resto i {
+  position: absolute;
+  left: 5%;
+  top: 31%;
+  font-size: 25px;
+  top: 30%;
+  color: #434343;
 }
 
 footer {
@@ -187,6 +213,36 @@ footer ul {
   top: 34%;
   font-size: 30px;
   font-weight: 300;
+}
+
+.menu {
+  background-color: #f1f1f1;
+  border-radius: 45px 45px 0px 0px;
+  position: relative;
+  top: -50px;
+  padding: 34px 5% 5% 5%;
+}
+.menu .menu__title {
+  padding: 0px 0px 5% 2%;
+  font-size: 33px;
+  display: flex;
+  justify-content: space-between;
+}
+.menu .menu__title i {
+  position: absolute;
+  top: 3.5%;
+  right: 5%;
+}
+.menu .menu__subtitle {
+  font-size: 22px;
+  font-weight: 300;
+  padding-bottom: 5px;
+}
+.menu .menu__line {
+  background-color: #99E2D0;
+  width: 55px;
+  height: 4px;
+  margin-bottom: 20px;
 }
 
 /*# sourceMappingURL=style.css.map */
