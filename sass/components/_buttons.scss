@@ -12,6 +12,10 @@ button {
     @include pink__gradient__button(#9356DC, #FF79DA)
 }
 
+.test {
+    display: flex;
+}
+
 .list__button {
     padding: 20px 0px;
     margin: 20px 0px;
@@ -35,10 +39,10 @@ button {
     }
     i {
         color: #727272;
-        padding: 0% 0% 0% 13%;
+        padding: 0px 0px 0px 40px;
     }
     p {
-        padding: 0% 0% 0% 10%;
+        padding: 0px 0px 0px 20px;
     }
 }
 
