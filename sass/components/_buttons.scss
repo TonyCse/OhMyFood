@@ -4,13 +4,13 @@ button {
 
 .menu button {
     padding: 20px 60px 20px 60px;
-    @include pink__gradient__button(#9356DC, #FF79DA)
+    @include pink__gradient__button($color1, $color2);
 }
 
 .title button {
     padding: 20px;
-    @include pink__gradient__button(#9356DC, #FF79DA)
-}
+    @include pink__gradient__button($color1, $color2);
+    }
 
 .test {
     display: flex;
@@ -32,7 +32,7 @@ button {
         text-align: center;
         color: white;
         font-size: 15px;
-        background-color: #9356DC;
+        background-color: $color1;
         height: 25px;
         width: 25px;
         border-radius: 100px;
@@ -49,6 +49,6 @@ button {
 .list__button:hover {
     background-color: #f5edff;
         i {
-            color: #8626fc;;
+            color: $color1;;
     }
 }

@@ -39,6 +39,11 @@ button {
   border: none;
   box-shadow: 5px 4px 8px 1px #919191;
 }
+.menu button:hover {
+  transition-duration: 1s;
+  filter: brightness(1.2);
+  box-shadow: 8px 8px 12px 8px rgba(0, 0, 0, 0.5);
+}
 
 .title button {
   padding: 20px;
@@ -49,6 +54,11 @@ button {
   background-image: linear-gradient(to top, #9356DC, #FF79DA);
   border: none;
   box-shadow: 5px 4px 8px 1px #919191;
+}
+.title button:hover {
+  transition-duration: 1s;
+  filter: brightness(1.2);
+  box-shadow: 8px 8px 12px 8px rgba(0, 0, 0, 0.5);
 }
 
 .test {
@@ -89,7 +99,7 @@ button {
   background-color: #f5edff;
 }
 .list__button:hover i {
-  color: #8626fc;
+  color: #9356DC;
 }
 
 .card__img {

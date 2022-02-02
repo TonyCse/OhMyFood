@@ -6,4 +6,9 @@
     background-image: linear-gradient(to top, $color1, $color2);
     border: none;
     box-shadow: 5px 4px 8px 1px #919191;
+    &:hover {
+        transition-duration: 1s;
+        filter: brightness(1.2);
+        box-shadow: 8px 8px 12px 8px rgba(0, 0, 0, 0.5);
+      }
 }
