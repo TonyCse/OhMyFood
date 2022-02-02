@@ -9,19 +9,29 @@
 
 .menu__card {
     background-color: white;
-    border-radius: 17px;
+    border-radius: 15px;
     margin-bottom: 15px;
     padding: 17px;
     display: flex;
+    justify-content: space-between;
     align-items: center;
     box-shadow: 2px 3px 11px -3px #919191;
         .menu__card__text {
-            flex: 1;
+            width: 87%;
             h3 {
                 padding-bottom: 7px;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
             p {
                 font-weight: 400;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                overflow: hidden;
             }
         }
-}
+        .menu__card__price {
+            align-self: flex-end;
+        }
+    }
