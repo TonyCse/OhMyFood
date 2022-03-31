@@ -116,31 +116,114 @@ button {
   background-color: white;
   border-radius: 15px;
   margin-bottom: 15px;
-  padding: 17px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   box-shadow: 2px 3px 11px -3px #919191;
+  overflow: hidden;
+  cursor: pointer;
+  animation: AnimationMenu 1s ease both;
+  -webkit-animation: AnimationMenu 1s ease both;
 }
-.menu__card .menu__card__text {
+.menu__card__text {
+  padding: 17px 0px 17px 17px;
   width: 87%;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
-.menu__card .menu__card__text h3 {
+.menu__card__text h3 {
   padding-bottom: 7px;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu__card .menu__card__text p {
+.menu__card__text p {
   font-weight: 400;
   text-overflow: ellipsis;
   white-space: nowrap;
   overflow: hidden;
 }
-.menu__card .menu__card__price {
-  align-self: flex-end;
+.menu__card__slide {
+  display: flex;
+}
+.menu__card__slide__price {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: 1;
+  height: 83px;
+}
+.menu__card__slide__validation {
+  flex: 1;
+  margin-right: -65px;
+  height: 83px;
+  width: 100px;
+  display: flex;
+  background-color: #99E2D0;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.1s ease;
+}
+.menu__card__slide__validation__icon {
+  height: 30px;
+  width: 30px;
+  background-color: white;
+  color: #99E2D0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 100px;
+}
+.menu__card__slide__validation__icon i {
+  transform: rotate(-360deg);
+  transition: 1s;
 }
 
+.menu__card:hover .menu__card__slide__validation i {
+  transform: rotate(0);
+}
+
+.menu__card:hover .menu__card__slide__validation {
+  margin-right: 0px;
+  transition-duration: 1s;
+}
+
+@media screen and (max-width: 992px) {
+  .menu__card:active .menu__card__slide__validation i {
+    transform: rotate(0);
+  }
+
+  .menu__card:active .menu__card__slide__validation {
+    margin-right: 0px;
+    transition-duration: 1s;
+  }
+}
+.card-1 {
+  animation-delay: 0.5s;
+}
+
+.card-2 {
+  animation-delay: 0.75s;
+}
+
+.card-3 {
+  animation-delay: 1s;
+}
+
+.card-4 {
+  animation-delay: 1.25s;
+}
+
+@keyframes AnimationMenu {
+  0% {
+    transform: translateY(15px);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
 header {
   box-shadow: 0px 0px 10px 0px #919191;
   position: relative;
@@ -186,8 +269,8 @@ footer ul {
 }
 
 .loader {
-  z-index: 10;
-  position: absolute;
+  z-index: 1;
+  position: fixed;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -224,21 +307,8 @@ footer ul {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: wave 5s infinite;
-  -webkit-animation: wave 5s infinite;
 }
 
-@-webkit-keyframes wave {
-  0% {
-    background-position: 0% 50%;
-  }
-  50% {
-    background-position: 100% 50%;
-  }
-  100% {
-    background-position: 0% 50%;
-  }
-}
 @keyframes wave {
   0% {
     background-position: 0% 50%;
@@ -325,8 +395,44 @@ footer ul {
   border-radius: 3px;
 }
 .restaurants .card__description {
-  padding: 20px;
+  padding: 15px;
+  display: flex;
+}
+.restaurants .card__description__text {
+  flex: 1;
+}
+.restaurants .card__description__heart {
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
   position: relative;
+  cursor: pointer;
+}
+.restaurants .card__description__heart i, .restaurants .card__description__heart .white__square {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+}
+.restaurants .card__description__heart .hiden__heart {
+  background: linear-gradient(-45deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.restaurants .card__description__heart .white__square {
+  height: 100%;
+  width: 100%;
+}
+.restaurants .card__description__heart:hover .first__heart {
+  display: none;
+}
+.restaurants .card__description__heart:hover .white__square {
+  height: 0px;
+  transition: ease-in all 0.5s;
+}
+.restaurants .card__description .white__square {
+  background-color: #fff;
 }
 .restaurants h3 {
   padding-bottom: 5px;
@@ -336,16 +442,6 @@ footer ul {
 .restaurants p {
   font-size: 17px;
   font-weight: 300;
-}
-.restaurants i {
-  position: absolute;
-  right: 7%;
-  top: 34%;
-  font-size: 30px;
-  font-weight: 300;
-}
-.restaurants i.full {
-  color: red;
 }
 
 @media only screen and (min-width: 768px) {
@@ -399,6 +495,39 @@ footer ul {
   top: -50px;
   padding: 34px 5% 5% 5%;
   margin-bottom: -50px;
+}
+.menu__heart {
+  height: 30px;
+  width: 30px;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+.menu__heart i, .menu__heart .white__square {
+  font-size: 30px;
+  position: absolute;
+  top: 0;
+}
+.menu__heart .hiden__heart {
+  background: linear-gradient(-45deg, #9356DC, #FF79DA);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+.menu__heart .white__square {
+  height: 100%;
+  width: 100%;
+}
+.menu__heart:hover .first__heart {
+  display: none;
+}
+.menu__heart:hover .white__square {
+  height: 0px;
+  transition: ease-in all 0.5s;
+}
+.menu .white__square {
+  background-color: #f1f1f1;
 }
 .menu__title {
   font-size: 28px;

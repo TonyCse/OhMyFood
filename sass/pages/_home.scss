@@ -1,6 +1,6 @@
 .loader {
-        z-index: 10;
-        position: absolute;
+        z-index: 1;
+        position: fixed;
         display: flex;
         justify-content: center;
         align-items: center;
@@ -36,16 +36,9 @@
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            animation: wave 5s  infinite;
-            -webkit-animation: wave 5s infinite;
         }
 }
 
-@-webkit-keyframes wave {
-    0% {background-position: 0% 50%;}
-    50% {background-position: 100% 50%;}
-    100% {background-position: 0% 50%;}
-}
 
 @keyframes wave {
     0% {background-position: 0% 50%;}
@@ -121,8 +114,15 @@
                     border-radius: 3px;
             }
             &__description {
-                padding: 20px;
-                position: relative;
+                padding: 15px;
+                display: flex;
+                &__text {
+                    flex: 1;
+                }
+                @include heart__transition;
+                .white__square {
+                    background-color: #fff;
+                }
             }
         }
         
@@ -135,16 +135,7 @@
             font-size: 17px;
             font-weight: 300;
         }
-        i {
-            position: absolute;
-            right: 7%;
-            top: 34%;
-            font-size: 30px;
-            font-weight: 300;
-            &.full {
-            color: red;
-            }
-        }
+        
 }
 
 @media only screen and (min-width: 768px) {
@@ -184,7 +175,7 @@
     }
 
     .restaurants__card {
-        padding: 20px;
+        padding: 20px 30px;
         display: grid;
         grid-template-columns: repeat(2, 47%);
         column-gap: 6%;

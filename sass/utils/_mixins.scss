@@ -12,3 +12,39 @@
         box-shadow: 8px 8px 12px 8px rgba(0, 0, 0, 0.5);
       }
 }
+
+@mixin heart__transition {
+  &__heart {
+    height: 30px;
+    width: 30px;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    cursor: pointer;
+    i, .white__square {
+        font-size: 30px;
+        position: absolute;
+        top: 0;
+    }
+    .hiden__heart {
+        background: linear-gradient(-45deg, $color1, $color2);
+        background-clip: text;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+    .white__square {
+        height: 100%;
+        width: 100%;
+    }
+    &:hover {
+        .first__heart {
+            display: none;
+        }
+
+        .white__square {
+            height: 0px;
+            transition: ease-in all 0.5s;
+        }
+      }
+    }
+  }

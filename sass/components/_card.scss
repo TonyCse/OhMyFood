@@ -11,13 +11,19 @@
     background-color: white;
     border-radius: 15px;
     margin-bottom: 15px;
-    padding: 17px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     box-shadow: 2px 3px 11px -3px #919191;
-        .menu__card__text {
+    overflow: hidden;
+    cursor: pointer;
+    animation: AnimationMenu 1s ease both;
+    -webkit-animation: AnimationMenu 1s ease both;
+        &__text {
+            padding: 17px 0px 17px 17px;
             width: 87%;
+            text-overflow: ellipsis;
+            overflow: hidden;
             h3 {
                 padding-bottom: 7px;
                 text-overflow: ellipsis;
@@ -31,7 +37,86 @@
                 overflow: hidden;
             }
         }
-        .menu__card__price {
-            align-self: flex-end;
+        &__slide {
+            display: flex;
+            &__price {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                flex: 1;
+                height: 83px;
+            }
+            &__validation {
+                flex: 1;
+                margin-right: -65px;
+                height: 83px;
+                width: 100px;
+                display: flex;
+                background-color: $color3;
+                align-items:center;
+                justify-content:center;
+                transition: all 0.1s ease;
+                &__icon {
+                    height: 30px;
+                    width: 30px;
+                    background-color: rgb(255, 255, 255);
+                    color: $color3;
+                    display:flex;
+                    align-items:center;
+                    justify-content:center;
+                    border-radius: 100px;
+                    i {
+                        transform: rotate(-360deg);
+                        transition: 1s;
+                    }
+                }
+            }
+        }
+    }
+    
+    .menu__card:hover .menu__card__slide__validation i {
+        transform: rotate(0);
+    }
+    
+    .menu__card:hover .menu__card__slide__validation {
+        margin-right: 0px;
+        transition-duration: 1s;
+    }
+
+    @media screen and (max-width: 992px) {
+        .menu__card:active .menu__card__slide__validation i {
+            transform: rotate(0);
+        }
+
+        .menu__card:active .menu__card__slide__validation {
+            margin-right: 0px;
+            transition-duration: 1s;
+        }
+    }
+
+    .card-1 {
+        animation-delay: 0.50s;
+    }
+
+    .card-2 {
+        animation-delay: 0.75s;
+    }
+
+    .card-3 {
+        animation-delay: 1s;
+    }
+
+    .card-4 {
+        animation-delay: 1.25s;
+    }
+
+    @keyframes AnimationMenu {
+        0% {
+          transform: translateY(15px);
+          opacity: 0;
+        }
+        100% {
+          transform: translateY(0);
+          opacity: 1;
         }
     }

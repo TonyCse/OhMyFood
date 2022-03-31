@@ -5,6 +5,10 @@
     top: -50px;
     padding: 34px 5% 5% 5%;
     margin-bottom: -50px;
+    @include heart__transition;
+    .white__square {
+        background-color: #f1f1f1;
+    }
     &__title {
         font-size: 28px;
         display: flex;
